@@ -1,0 +1,30 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>stronglyTypedLogin</title>
+</head>
+<body>
+
+
+    @using (Html.BeginForm("LoginSuccess","Account",FormMethod.Post))
+    {
+        <div>
+            username:@Html.TextAreaFor(m=>m.UserName)
+        </div>
+        <div>
+            password: @Html.PasswordFor(m=>m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    }
+
+</body>
+</html>
